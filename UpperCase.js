@@ -1,15 +1,31 @@
-var wars = "the-stealth-warrior"
-for (let i = wars.indexOf('-'); i < wars.length; i++) { 
-    if (wars.charAt(i)==='-') {
- let cap = wars.charAt(i+1)
-   
-   
-  let char = cap.toUpperCase();
-   
-let x = wars.charAt(i);
-    var wars = wars.replace(`${x + cap}`, `${char}`);
-        if (wars.indexOf('-') == -1) { 
-console.log(wars)
+
+
+var wars = "The-Stealth-Warrior"
+
+// declaring a loop of i
+for (let i = wars.indexOf('-'); i < wars.length; i++) {
+
+    // asserting i only equal to "-"
+    if (wars.charAt(i) === '-') {
+        let x = wars.charAt(i);
+
+        //identifing the first letter after "-" 
+        let cap = wars.charAt(i + 1)
+
+       if (cap != cap.toUpperCase()){
+        let char = cap.toUpperCase();
+
+        // replacing the first letter and "-" with a capital one
+        var wars = wars.replace(`${x + cap}`, `${char}`);
+       }
+       else {
+           var wars = wars.replace(`${x}`,"");
+       };
+
+
+        // asserting that there isn't any "-" then excuting the final result 
+        if (wars.indexOf('-') == -1) {
+            console.log(wars)
         };
     };
 };
@@ -18,6 +34,23 @@ console.log(wars)
 
 
 /*
+ if (cap === cap.toUpperCase()) {
+            var wars = wars.replace(`${x}`, "");
+        };
+
+else {
+    let char = cap.toUpperCase();
+
+    // replacing the first letter and "-" with a capital one
+    var wars = wars.replace(`${x + cap}`, `${char}`);
+};
+
+
+
+wars.charAt(i + 1) != cap.toUpperCase()
+
+
+
 let x = war.charAt(i);
 
 
