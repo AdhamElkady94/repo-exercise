@@ -1,2 +1,4 @@
 # MY Code Wars
-# First training "toCamelCase".
+# Training :
+            1- "toCamelCase"
+            
